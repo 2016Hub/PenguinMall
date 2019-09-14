@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<title>餐厅桌椅</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/proList.css"/>
+		<link rel="stylesheet" href="./css/pagination.css">
+		<script src="js/fun.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<!------------------------------head------------------------------>
+		<div class="head">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fls"><a href="index.html"><img src="img/logo.png"/></a></h1>
+					<div class="fh clearfix" id="top1">
+						<p class="fl">
+							<a href="mygrxx.html" id="login"></a>
+							<a href="login.html" id="reg">退出登录</a>
+						</p>
+						<div class="btn fl clearfix">
+							<a href="mygrxx.html"><img src="img/grzx.png"/></a>
+							<a href="#" class="er1"><img src="img/ewm.png"/></a>
+							<a href="cart.html"><img src="img/gwc.png"/></a>
+							<p><a href="#"><img src="img/smewm.png"/></a></p>
+						</div>
+					</div>
+				</div>
+				<ul class="clearfix" id="bott">
+
+					<li><a href="index.html" style="font-weight: bold;font-size: 18px">首页</a></li>
+					<li>
+						<a  style="font-weight: 500;font-size: 18px">所有商品</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a href="flowerDer.html?classify=1">
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/Tit1.png"/></dt>
+										<dd style="font-weight: bold;font-size: 15px;color: #563D7C">餐厅凳椅</dd>
+									</dl>
+								</a>
+								<a href="flowerDer.html?classify=2">
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/Tit2.png"/></dt>
+										<dd style="font-weight: bold;font-size: 15px;color: #563D7C">卧室储物</dd>
+									</dl>
+								</a>
+								<a href="perfume.html?classify=3">
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/Tit3.png"/></dt>
+										<dd style="font-weight: bold;font-size: 15px;color: #563D7C">居家软床</dd>
+									</dl>
+								</a>
+								<a href="perfume.html?classify=4">
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/Tit4.png"/></dt>
+										<dd style="font-weight: bold;font-size: 15px;color: #563D7C">布艺沙发</dd>
+									</dl>
+								</a>
+								<a href="idea.html?classify=5">
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/Tit5.png"/></dt>
+										<dd style="font-weight: bold;font-size: 15px;color: #563D7C">装饰边桌</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="flowerDer.html?classify=1" style="font-weight: 500;font-size: 18px">餐厅凳椅</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/1_1_1.png"/></dt>
+										<dd>当季新品一</dd>
+									</dl>
+								</a>
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/1_2_1.png"/></dt>
+										<dd>当季新品二</dd>
+									</dl>
+								</a>
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/1_3_1.png"/></dt>
+										<dd>当季新品三</dd>
+									</dl>
+								</a>
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/1_4_1.png"/></dt>
+										<dd>当季新品四</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="flowerDer.html?classify=2" style="font-weight: 500;font-size: 18px">卧室储物</a>
+						<div class="sList">
+							<div class="wrapper  clearfix">
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/2_1_1.PNG"/></dt>
+										<dd>当季新品一</dd>
+									</dl>
+								</a>
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/2_2_1.PNG"/></dt>
+										<dd>当季新品二</dd>
+									</dl>
+								</a>
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/2_3_1.PNG"/></dt>
+										<dd>当季新品三</dd>
+									</dl>
+								</a>
+								<a>
+									<dl>
+										<dt><img style="width: auto;height: 150px;" src="img/2_4_1.PNG"/></dt>
+										<dd>当季新品四</dd>
+									</dl>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li><a href="perfume.html?classify=3" style="font-weight: 500;font-size: 18px">居家软床</a></li>
+					<li><a href="perfume.html?classify=4" style="font-weight: 500;font-size: 18px">布艺沙发</a></li>
+					<li><a href="idea.html?classify=5" style="font-weight: 500;font-size: 18px">装饰边桌</a></li>
+				</ul>
+			</div>
+		</div>
+		<!------------------------------banner------------------------------>
+		<div class="banner">
+			<a><img src="img/temp/2.jpg"/></a>
+		</div>
+		<!-------------------current---------------------->
+		<div class="current">
+			<div class="wrapper clearfix">
+				<h3 class="fl">餐厅桌椅</h3>
+				<div class="fr choice">
+					<p class="default">排序方式</p>
+					<ul class="select">
+						<li>新品上市</li>
+						<li>销量从高到低</li>
+						<li>销量从低到高</li>
+						<li>价格从高到低</li>
+						<li>价格从低到高</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!----------------proList------------------------->
+		<ul class="proList wrapper clearfix">
+
+
+
+		</ul>
+		<!----------------mask------------------->
+		<div class="mask"></div>
+		<!-------------------mask内容------------------->
+		<div class="proDets">
+			<img class="off" src="img/temp/off.jpg" />
+			<div class="tit clearfix">
+				<h4 class="fl" id="name"></h4>
+				<span class="fr" id="price"></span>
+			</div>
+			<div class="proCon clearfix">
+				<div class="proImg fl">
+					<img class="list" id="p1_Url_1" style="width:360px;height:360px;" />
+					<div class="smallImg clearfix">
+						<img id="p1_Url" >
+						<img id="p2_Url" >
+						<img id="p3_Url" >
+						<img id="p4_Url" >
+					</div>
+				</div>
+				<div class="fr">
+					<div class="proIntro">
+						<p>颜色分类</p>
+						<div class="smallImg clearfix categ">
+							<p class="fl"><img src="img/color_1.png" alt="晨曦白" o_color=1></p>
+							<p class="fl"><img src="img/color_2.png" alt="墨玉黑" o_color=2></p>
+							<p class="fl"><img src="img/color_3.png" alt="珊瑚红" o_color=3></p>
+							<p class="fl"><img src="img/color_4.png" alt="薄荷蓝" o_color=4></p>
+						</div>
+						<p>数量</p>
+						<div class="num clearfix">
+							<img class="fl sub" src="img/temp/sub.jpg">
+							<span class="fl" contentEditable="true">1</span>
+							<img class="fl add" src="img/temp/add.jpg">
+							<p class="please fl">请选择商品属性!</p>
+						</div>
+					</div>
+					<div class="btns clearfix">
+						<a id="buy"><p class="buy fl">加入购物车</p></a>
+						<a href="cart.html"><p class="cart fr">进入购物车</p></a>
+					</div>
+				</div>
+			</div>
+			<a class="more" id="itemID">查看更多细节</a>
+		</div>
+		<!-------------------------------------返回顶部---------------------------------->
+		<div class="gotop">
+			<a href="cart.html">
+				<dl class="goCart">
+					<dt><img src="img/gt1.png"/></dt>
+					<dd>去购<br />物车</dd>
+					<span>1</span>
+				</dl>
+			</a>
+			<a href="#" class="dh">
+				<dl>
+					<dt><img src="img/gt2.png"/></dt>
+					<dd>联系<br />客服</dd>
+				</dl>
+			</a>
+			<a href="mygxin.html">
+				<dl>
+					<dt><img src="img/gt3.png"/></dt>
+					<dd>个人<br />中心</dd>
+				</dl>
+			</a>
+			<a href="#" class="toptop" style="display: none;">
+				<dl>
+					<dt><img src="img/gt4.png"/></dt>
+					<dd>返回<br />顶部</dd>
+				</dl>
+			</a>
+			<p>400-800-8200</p>
+		</div>
+		<div class="msk"></div>
+		<!-------------------------------------footer----------------------------------->
+		<div id="pagination" class="pagination"></div>
+		<div class="footer">
+
+			<p class="dibu">企鹅家居&copy;2018-2020公司版权所有 京ICP备080100-44备0000111000号<br />
+				违法和不良信息举报电话：400-800-8200，本网站所列数据，除特殊说明，均属原创，侵权必究！</p>
+		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="./js/pagination.js"></script>
+
+	</body>
+	<script>
+
+		var useremail = getCookie('email');
+		$(function () {
+			$("#login").html(useremail);
+		});
+
+
+
+		//定义全局商品数组信息
+		// var g_itemList = [];
+		var g_itemList = new Array();
+		jQuery(document).ready(function(){
+			$.ajax({
+				//ajax请求头
+				type:"GET",
+				url:"http://localhost:8090/item/list",
+				data:{
+					"classify":getParam("classify"),
+				},
+				success:function (data) {
+					if(data.status === "success"){
+
+						g_itemList = data.data;
+						initUI(1,12);
+					}else{
+						alert("获取商品信息失败，原因为" + data.data.errMsg);
+					}
+				},
+				fail:function (data) {
+					alert("获取商品信息失败，原因为"+data.responseText);
+				}
+			});
+		});
+
+
+		//分页函数
+
+		function initUI(pageNo, pageSize) {
+			var data=new Array();
+
+
+			for(var i = 0; i < g_itemList.length*3; i++) {
+				var itemVO = g_itemList[i%20];
+				data[i] = new Array();
+				data[i][0]=itemVO.p1;
+				data[i][1]=itemVO.name;
+				data[i][2]="￥"+itemVO.price;
+				data[i][3]=itemVO.id;
+			}
+
+
+			var html = '';
+			for(var i = (pageNo-1)*pageSize; i < pageNo*pageSize; i++) {
+				// var item = data1[i];
+				// html += '<li class="list-item">'+item+'</li>';
+				var  path = data[i][0];
+				var  item_name = data[i][1];
+				var  item_price = data[i][2];
+
+				// document.write(path);
+				html +='<li id='+i+' ><a href="proDetail.html?item_id='+data[i][3]+'"><dl><dt><img id="img" src="./img/item/'+path+'" ></dt><dd>'+item_name+'</dd><dd>'+item_price+'</dd></dl></a></li>'
+
+			}
+
+			// document.getElementsByClassName('data-list')[0].innerHTML = html;
+			document.getElementsByClassName('proList wrapper clearfix')[0].innerHTML = html;
+
+			$(".proList li").on('mouseenter',function(){
+				var html1="";
+				html1 = '<button type="button" class="quick">view</button>';
+				$(this).css('border','1px solid #563D7C').append(html1);
+				$(".quick").on('click',function(){
+
+					var j = $(this).parent().attr("id");
+					var itemVO2 = g_itemList[j];
+					$("#itemID").attr("href","proDetail.html?item_id="+itemVO2.id);
+					$("#name").text(itemVO2.name);
+					$("#description").text(itemVO2.description);
+					$("#price").text("￥"+itemVO2.price);
+					$("#stock").text(itemVO2.stock);
+					$("#sales").text(itemVO2.sales);
+					$("#p1_Url_1").attr("src", "img/item/"+itemVO2.p1);
+					$("#p1_Url").attr("src", "img/item/"+itemVO2.p1);
+					$("#p2_Url").attr("src", "img/item/"+itemVO2.p2);
+					$("#p3_Url").attr("src", "img/item/"+itemVO2.p3);
+					$("#p4_Url").attr("src", "img/item/"+itemVO2.p4);
+					$(".mask").show();
+					$(".proDets").show();
+				});
+				$(".btns .cart").click(function(){
+					if($(".categ p").hasClass("on")){
+						$(".proDets").hide();
+						$(".mask").hide();
+					}
+				});
+			});
+			$(".proList li").on('mouseleave',function(){
+				$(this).find("button").remove();
+				$(this).css('border','1px solid #fff');
+			});
+			//关闭按钮
+			$(".off").click(function(){
+				$(".mask").hide();
+				$(".proDets").hide();
+				$(".pleaseC").hide();
+			});
+
+
+			pagination({
+				cur: pageNo,
+				total: 5,
+				len: 5,
+				targetId: 'pagination',
+				callback: function(total) {
+					var oPages = document.getElementsByClassName('page-index');
+					for(var i = 0; i < oPages.length; i++) {
+						oPages[i].onclick=function() {
+							initUI(this.getAttribute('data-index'), 12);
+						}
+					}
+					var goPage = document.getElementById('go-search');
+					goPage.onclick = function() {
+						var index = document.getElementById('yeshu').value;
+						if(!index || (+index > total) || (+index < 1)) {
+							return;
+						}
+						initUI(index, 12);
+					}
+				}
+			});
+		}
+
+
+		$(function(){
+			$("#buy").click(function(){
+				var item_id = getParam("item_id");
+				var user_id =getCookie("id");
+				var price = g_itemVO.price;
+				var amount = $("#amount").text();
+				var ifdone = 0;
+				var i_color = $("#col").attr("i_color");
+
+				var address = "";
+				var pay_mode = "";
+
+				if(i_color == null || i_color === ""){
+					swal("颜色不能为空");
+					return false;
+				}
+
+				$.ajax({
+					type:"POST",
+					contentType:"application/x-www-form-urlencoded",
+					url:"http://localhost:8090/order/order",
+					data:{
+						"item_id":item_id,
+						"user_id":user_id,
+						"price":price,
+						"amount":amount,
+						"ifdone":ifdone,
+						"i_color":i_color,
+						"address":address,
+						"pay_mode":pay_mode
+					},
+					success:function (data) {
+						if(data.status === "success"){
+
+							alert("加入购物车成功");
+
+						}else{
+							alert("失败，原因为" + data.data.errMsg);
+						}
+					},
+					error:function (data) {
+						alert("失败，原因为"+data.responseText);
+					}
+				});
+
+
+			})
+
+
+		})
+
+	</script>
+</html>

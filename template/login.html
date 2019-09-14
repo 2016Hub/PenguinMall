@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="./css/floating-labels.css"  rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/fun.js" type="text/javascript" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://www.huangwx.cn/css/sweetalert.css">
+		<script type="text/javascript" src="https://www.huangwx.cn/js/sweetalert-dev.js"></script>
+	</head>
+	<style>
+		body{
+			width:100%;
+			height:100%;
+			background: url(./img/temp/19.jpg)  no-repeat center center;
+			background-size: 100% 100%;
+		}
+	</style>
+<body>
+		<div style="width: 1200px;margin: 0 auto">
+			<div class="d-flex justify-content-end">
+
+				<div style="width: 400px;padding-right: 20px">
+					<div class="text-center mb-4">
+						<img class="mb-4" src="img/logo.png" alt="" >
+						<h1 class="h3 mb-3 font-weight-normal">Welcome To Penguin</h1>
+					</div>
+					<div class="form-label-group">
+						<input type="email" id="inputEmail" class="form-control" placeholder="Email address" aria-label="Email address" aria-describedby="basic-addon2">
+						<label for="inputEmail">Email address</label>
+					</div>
+					<div class="form-label-group" >
+						<input type="password" id="inputPassword" class="form-control" placeholder="Password" >
+						<label for="inputPassword">Password</label>
+					</div>
+					<div class="checkbox mb-3">
+						<label>
+							<input type="checkbox" value="remember-me"> Remember me
+						</label>
+					</div>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" id="button">Sign in</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href = 'reg.html'" >Return Regsiter</button>
+				</div>
+			</div>
+		</div>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</body>
+    <script>
+
+        var EmailTest =/^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/;		//一般邮箱格式
+        $(function () {
+            $("#button").click(function () {
+                var email = $("#inputEmail").val();
+                var password = $("#inputPassword").val();
+
+
+                if(email == null || email === ""){
+                    swal("邮箱不能为空");
+                    return false;
+                }
+                if(password == null || password === ""){
+                    swal("密码不能为空");
+                    return false;
+                }
+
+                if (!EmailTest.test(email)){
+                    swal("Email格式有问题！");
+                    return;
+                }
+                $.ajax({
+                    type:"POST",
+                    contentType:"application/x-www-form-urlencoded",
+                    url:"http://localhost:8090/user/login",
+                    data:{
+                        "email":email,
+						"password":password
+					},
+                    success:function (data) {
+                        if(data.status === "success"){
+
+                            setCookie("id",data.data.id);
+                            setCookie("email",data.data.email);
+                            setCookie("name",data.data.name);
+                            setCookie("age",data.data.age);
+                            setCookie("password",password);
+
+                            alert("登录成功"+data.data.email);
+
+                            window.location.href="index.html";
+                        }else{
+                            swal("登录失败，原因为" + data.data.errMsg);
+                        }
+                    },
+                    error:function (data) {
+                        swal("登录失败，原因为14"+data.responseText);
+                    }
+                })
+            })
+        })
+    </script>
+
+
+
+</html>
